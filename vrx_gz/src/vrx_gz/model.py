@@ -70,6 +70,8 @@ class Model:
             vrx_gz.bridges.pose(self.model_name),
             # pose static
             vrx_gz.bridges.pose_static(self.model_name),
+            # joint states
+            vrx_gz.bridges.joint_states(world_name, self.model_name),
             # comms tx
             # vrx_gz.bridges.comms_tx(self.model_name),
             # comms rx
@@ -87,11 +89,7 @@ class Model:
                 vrx_gz.bridges.cmd_vel(self.model_name)
             ])
         elif self.is_USV():
-            bridges.extend([
-                # Acoustic pinger
-                vrx_gz.bridges.acoustic_pinger(self.model_name),
-                vrx_gz.bridges.set_acoustic_pinger(self.model_name),
-            ])
+            pass
 
         return [bridges, nodes, custom_launches]
 
