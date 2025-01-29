@@ -455,7 +455,7 @@
       <uri>wdog_boat</uri>
     </include>
 
-    <!-- My custom roboboat -->
+    <!-- wdog bouys -->
     <include>
       <name>task_1</name>
       <pose>-175 1120 0 0 0 3.14</pose>
